@@ -15,7 +15,7 @@
 					<header id="header">
 						<span class="avatar"><img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="" /></span>
 
-            <h1>Description</h1>
+            <h1>{{bio}}</h1>
             <br>
             <!-- About me button -->
             <a href="#"><button style="color:white;width:40%" >More about me</button></a>
@@ -43,7 +43,11 @@
                       </a>
                 
                       <a href="">
+<<<<<<< HEAD
+                        <img src="{{img}}" alt="" />
+=======
                         <img src="{{url_for('static',filename='images/thumbs/02.jpg')}}" alt="" />
+>>>>>>> c97838a066ec9856c605dde4e08b22e2acad97ae
                         <h3>Caption... blah blah blah</h3>
                       </a>
                 </div>    
@@ -55,6 +59,17 @@
                 </div>  
 
 							</section>
+
+					</section>
+
+					<section id="POSTS">
+						<h1> Posts: </h1>
+						{%for post_key in posts%}
+								<a href="{{post_key}}">
+									<h3>{{posts[post_key]}}</h3>
+								</a>
+						{%endfor%}
+						
 
 					</section>
 
